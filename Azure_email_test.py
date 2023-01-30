@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email import encoders
-
+import datetime
 ## FILE TO SEND AND ITS PATH
 filename = 'report.html'
 SourcePathName  = 'D:/a/r1/a/'+filename
@@ -14,8 +14,8 @@ print(SourcePathName)
 msg = MIMEMultipart()
 msg['From'] = 'rahulrnr173@gmail.com'
 msg['To'] = 'raghuln@nallas.com'
-msg['Subject'] = 'Tst'
-body = 'Body of the message goes in here'
+msg['Subject'] = ' SAMPLE REPORT '+str(datetime.datetime.now())
+body = 'Please find the attachment for the Detailed Report'
 msg.attach(MIMEText(body, 'plain'))
 
 ## ATTACHMENT PART OF THE CODE IS HERE
