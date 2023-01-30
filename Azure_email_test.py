@@ -30,7 +30,7 @@ msg.attach(part)
 session = smtplib.SMTP('smtp.gmail.com', 587)
 session.starttls()
 session.login("rahulrnr173@gmail.com", 'dtrkwzssutnbiwmk')
-session.sendmail('rahulrnr173@gmail.com', 'rahulrnr173@gmail.com', msg.as_string())
+session.sendmail('rahulrnr173@gmail.com', 'raghuln@nallas.com', msg.as_string())
 session.quit()
 print('Mail Sent')
 
