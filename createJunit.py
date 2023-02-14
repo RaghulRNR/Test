@@ -8,7 +8,7 @@ print(len(junit_data['testResults']))
 print(junit_data['testResults'])
 for case in junit_data['testResults']['httpSample']:
     #print(junit_data['testResults']['httpSample'][case])
-    ET.SubElement(suite, 'testcase', ib=junit_data['testResults']['httpSample']['@lb'], timetaken=junit_data['testResults']['httpSample']['@ts'])
+    ET.SubElement(suite, 'testcase', name=junit_data['testResults']['httpSample']['@lb'], timetaken=junit_data['testResults']['httpSample']['@ts'])
 
 tree = ET.ElementTree(root)
 tree.write('junit.xml')
